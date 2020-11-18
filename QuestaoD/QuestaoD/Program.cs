@@ -26,7 +26,8 @@ namespace QuestaoD
             Console.WriteLine();
             Console.WriteLine("1 - Alterar email.");
             Console.WriteLine("2 - Alterar Cidade.");
-            Console.WriteLine("3 - Sair.");
+            Console.WriteLine("3 - Alterar Status.");
+            Console.WriteLine("4 - Sair.");
             Console.WriteLine();
             Console.Write("Escolha uma opção: ");
             int opcao = Convert.ToInt16(Console.ReadLine());
@@ -60,6 +61,11 @@ namespace QuestaoD
                     goto Menu;
 
                 case 3:
+                    Console.Write("Insira o novo Status do Aluno (true = Ativo, false = Inativo): ");
+                    aluno.Status = Convert.ToBoolean(Console.ReadLine());
+                    goto Menu;
+
+                case 4:
                     Console.WriteLine("Obrigado por utilizar nossos serviços.");
                     Console.ReadKey();
                     break;
